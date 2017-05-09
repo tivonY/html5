@@ -1,0 +1,72 @@
+
+  <div id="main-wrapper">
+
+    <div class="template-page-wrapper">
+
+      <div class="templatemo-content-wrapper">
+        <div class="templatemo-content">
+          <ol class="breadcrumb">
+            <li><a href="../index.html">Admin Panel</a></li>
+            <li><a href="#">Maps</a></li>
+          </ol>
+          <div class="templatemo-maps">
+            <div class="row">
+              <div class="col-md-12 col-sm-6 margin-bottom-30">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">World</h4>
+                  </div>
+                  <div class="panel-body">
+                    <div id="vmap_world" class="vmap"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Are you sure you want to sign out?</h4>
+              </div>
+              <div class="modal-footer">
+                <a href="sign-in.html" class="btn btn-primary">Yes</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+	</div>
+
+    <script src="res/jqvmap/jquery.vmap.js" type="text/javascript"></script>
+    <script src="res/jqvmap/maps/jquery.vmap.world.js" type="text/javascript"></script>
+    <script src="res/jqvmap/data/jquery.vmap.sampledata.js" type="text/javascript"></script>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+          $('#vmap_world').vectorMap({
+            map: 'world_en',
+            backgroundColor: '#ffffff',
+            color: '#333',
+            hoverOpacity: 0.7,
+            selectedColor: '#666666',
+            enableZoom: true,
+            showTooltip: true,
+            values: sample_data,
+            scaleColors: ['#C8EEFF', '#006491'],
+            normalizeFunction: 'polynomial'
+          });
+
+        });
+</script>
+</div>

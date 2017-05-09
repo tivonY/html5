@@ -1,0 +1,169 @@
+
+    <div class="template-page-wrapper">
+
+      <div class="templatemo-content-wrapper">
+        <div class="templatemo-content">
+          <ol class="breadcrumb">
+            <li><a href="index.html">Admin Panel</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li class="active">Overview</li>
+            <li><a href="sign-in.html">Sign In Form</a></li>
+          </ol>
+          <h1>Dashboard</h1>
+          <p>Dashboard is <a rel="nofollow" href="http://www.mycodes.net" target="_blank">free admin template</a> for everyone. Credits go to <a href="http://chartjs.org">Chart JS</a>, <a href="http://getbootstrap.com">Bootstrap</a>, and <a href="http://jqvmap.com">JQVMap</a>. templatemo provides <a href="#">free website templates</a> that can be used for any purpose. Morbi id nisi enim. Ut congue interdum pharetra facilisi. Aenean consectetur pellentesque mauris nec ornare. Nam tortor just, condimentum.</p>
+
+          <div class="margin-bottom-30">
+            <div class="row">
+              <div class="col-md-12">
+                <ul class="nav nav-pills">
+                  <li class="active"><a href="#">Home <span class="badge">42</span></a></li>
+                  <li class="active"><a href="#">Profile <span class="badge">126</span></a></li>
+                  <li class="active"><a href="#">Messages <span class="badge">14</span></a></li>
+                </ul>          
+              </div>
+            </div>
+          </div>         
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="templatemo-alerts">
+                <div class="row">
+                  <div class="col-md-12">
+                      <div class="panel panel-success">
+                        <div class="panel-heading">Data Visualization</div>
+                        <canvas id="templatemo-line-chart" height="120" width="500"></canvas>
+                      </div>
+                      <span class="btn btn-success"><a href="data-visualization.html">More Charts</a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="templatemo-progress">
+                <div class="list-group">
+                  <a href="#" class="list-group-item active">
+                    <h4 class="list-group-item-heading">Latest Data</h4>
+                    <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel adipiscing quam. Maecenas vehicula rhoncus magna, vitae lacinia sem auctor a. Vestibulum aliquam, nisl nec luctus volutpat, turpis orci posuere arcu, eget consectetur quam nunc ac arcu.</p>
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">Older Data</h4>
+                    <p class="list-group-item-text">Maecenas in facilisis nisi. Proin gravida nunc vel justo vestibulum, quis adipiscing velit faucibus. Sed a hendrerit orci. Nunc ut bibendum eros, at varius urna. Integer cursus condimentum dui vitae sagittis. Curabitur at vehicula nunc. Praesent at sem non nisl pellentesque placerat.</p>
+                  </a>
+                </div>
+
+              </div> 
+            </div>
+          </div>
+          <div class="templatemo-panels">
+            <div class="row">
+
+              <div class="col-md-12 col-sm-6 margin-bottom-30">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">User Table</div>
+                  <div class="panel-body">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Username</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>John</td>
+                          <td>Smith</td>
+                          <td>@js</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>Bill</td>
+                          <td>Jones</td>
+                          <td>@bj</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Marry</td>
+                          <td>James</td>
+                          <td>@mj</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <span class="btn btn-primary"><a href="tables.html">See Tables</a></span>
+              </div>       
+            </div>
+
+          </div>    
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title" id="myModalLabel">Are you sure you want to sign out?</h4>
+            </div>
+            <div class="modal-footer">
+              <a href="sign-in.html" class="btn btn-primary">Yes</a>
+              <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <script src="res/js/Chart.min.js"></script>
+
+    <script type="text/javascript">
+    // Line chart
+    var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+    var lineChartData = {
+      labels : ["January","February","March","April","May","June","July"],
+      datasets : [
+      {
+        label: "My First dataset",
+        fillColor : "rgba(220,220,220,0.2)",
+        strokeColor : "rgba(220,220,220,1)",
+        pointColor : "rgba(220,220,220,1)",
+        pointStrokeColor : "#fff",
+        pointHighlightFill : "#fff",
+        pointHighlightStroke : "rgba(220,220,220,1)",
+        data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+      },
+      {
+        label: "My Second dataset",
+        fillColor : "rgba(151,187,205,0.2)",
+        strokeColor : "rgba(151,187,205,1)",
+        pointColor : "rgba(151,187,205,1)",
+        pointStrokeColor : "#fff",
+        pointHighlightFill : "#fff",
+        pointHighlightStroke : "rgba(151,187,205,1)",
+        data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+      }
+      ]
+
+    }
+
+    var ctx_line = document.getElementById("templatemo-line-chart").getContext("2d");
+    window.myLine = new Chart(ctx_line).Line(lineChartData, {
+        responsive: true
+    });
+
+    $('#myTab a').click(function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+    });
+
+    $('#loading-example-btn').click(function () {
+      var btn = $(this);
+      btn.button('loading');
+      // $.ajax(...).always(function () {
+      //   btn.button('reset');
+      // });
+  });
+  </script>
